@@ -32,14 +32,17 @@ const post = [
 ];
 
 const app = express();
+
+app.use(express.json());
+
 app.listen(3000, () => {
   console.log("ligou bb...");
 });
 
-app.get("/api", (req, res) => {
+app.get("/post", (req, res) => {
   res
     .status(200)
-    .send(
-      "<h1>Cara, namoral, criar um servidor com express é mamão com açucar</h1>"
+    .json(
+      post
     );
 });

@@ -1,4 +1,4 @@
-import gerarDescricaoComGemini from "../../uploads/geminiService.js";
+import gerarDescricaoComGemini from "../services/geminiService.js"
 import { atualizarPost, criarPost, getTodosPosts } from "../models/postsModel.js";
 import fs from "fs";
 
@@ -37,7 +37,7 @@ export async function uploadImagem(req, res) {
 
 export async function atualizarNovoPost(req, res) {
   const id = req.params.id;
-  const urlImagem = `htpp://localhost:3000/${id}.png`;
+  const urlImagem = `http://localhost:3000/${id}.png`;
 
  
 
@@ -60,3 +60,4 @@ export async function atualizarNovoPost(req, res) {
     res.status(500).json({ Erro: "Falha na requisição" });
   }
 }
+

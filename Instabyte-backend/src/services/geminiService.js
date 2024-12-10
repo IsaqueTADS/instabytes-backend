@@ -21,3 +21,4 @@ export default async function gerarDescricaoComGemini(imageBuffer) {
     throw new Error("Erro ao obter o alt-text do Gemini.");
   }
 }
+

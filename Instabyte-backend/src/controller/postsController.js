@@ -19,6 +19,7 @@ export async function postarNovoPost(req, res) {
 }
 
 export async function uploadImagem(req, res) {
+  
   const novoPost = {
     descricao: "",
     imgUrl: req.file.originalname,
